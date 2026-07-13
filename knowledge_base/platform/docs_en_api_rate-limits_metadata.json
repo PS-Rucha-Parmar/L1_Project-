@@ -1,0 +1,17 @@
+{
+  "id": "a39fd9fc-6d50-48d0-b6ff-5bdec8bd086a",
+  "title": "Rate limits - Claude Platform Docs",
+  "library": "platform",
+  "topic": "api",
+  "url": "https://platform.claude.com/docs/en/api/rate-limits",
+  "category": "reference",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 1895,
+  "reading_time": "9 min",
+  "created": "2026-07-13T07:50:47.372192+00:00",
+  "updated": "2026-07-13T07:50:47.372215+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_api_rate-limits.md"
+}

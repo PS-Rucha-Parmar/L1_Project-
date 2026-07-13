@@ -1,0 +1,17 @@
+{
+  "id": "b178192b-a951-4230-8c33-a18548aa8879",
+  "title": "Tasks - Hugging Face",
+  "library": "huggingface",
+  "topic": "tasks",
+  "url": "https://huggingface.co/tasks",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 62,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:56:52.294279+00:00",
+  "updated": "2026-07-13T08:56:52.294293+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\tasks.md"
+}

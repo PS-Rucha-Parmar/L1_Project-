@@ -1,0 +1,17 @@
+{
+  "id": "f997a3a8-aa70-4ce0-a77d-9d9cd690665e",
+  "title": "Daily Papers - Hugging Face",
+  "library": "huggingface",
+  "topic": "papers",
+  "url": "https://huggingface.co/papers",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 131,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:57:06.975468+00:00",
+  "updated": "2026-07-13T08:57:06.975481+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\papers.md"
+}

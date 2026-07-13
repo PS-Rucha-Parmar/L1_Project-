@@ -1,0 +1,17 @@
+{
+  "id": "617d8d48-8b53-4825-8430-123ca13fdc36",
+  "title": "Claude Platform",
+  "library": "platform",
+  "topic": "general",
+  "url": "https://platform.claude.com/",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 35,
+  "reading_time": "1 min",
+  "created": "2026-07-13T07:37:10.084077+00:00",
+  "updated": "2026-07-13T07:37:10.084087+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\index.md"
+}

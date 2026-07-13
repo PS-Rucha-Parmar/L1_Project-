@@ -1,0 +1,17 @@
+{
+  "id": "8a0ecb00-b1de-40c5-a86f-b75dcd01a4f3",
+  "title": "Hugging Face on Microsoft Azure \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "microsoft-azure",
+  "url": "https://huggingface.co/docs/microsoft-azure",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 180,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:57:49.864542+00:00",
+  "updated": "2026-07-13T08:57:49.864550+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_microsoft-azure.md"
+}

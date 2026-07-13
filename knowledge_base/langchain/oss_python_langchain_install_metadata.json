@@ -1,0 +1,19 @@
+{
+  "id": "7ba02db9-55f0-4cfd-b705-18c2a5787278",
+  "title": "LangChain overview - Docs by LangChain",
+  "library": "langchain",
+  "topic": "chain",
+  "url": "https://python.langchain.com/oss/python/langchain/install",
+  "category": "documentation",
+  "tags": [
+    "langchain",
+    "python",
+    "chain"
+  ],
+  "word_count": 20,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:02:38.725626+00:00",
+  "updated": "2026-07-13T08:02:38.725652+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\langchain\\oss_python_langchain_install.md"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "d0d584a0-9c56-43b1-90da-786d63c5b705",
+  "title": "Documentation - Claude Platform Docs",
+  "library": "platform",
+  "topic": "home",
+  "url": "https://platform.claude.com/docs/en/home",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 154,
+  "reading_time": "1 min",
+  "created": "2026-07-13T07:34:33.895340+00:00",
+  "updated": "2026-07-13T07:34:33.895354+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_home.md"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "d5bd3329-01e8-487e-8b89-98f621e7df32",
+  "title": "Intro to Claude - Claude Platform Docs",
+  "library": "platform",
+  "topic": "intro",
+  "url": "https://platform.claude.com/docs/en/intro",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 404,
+  "reading_time": "2 min",
+  "created": "2026-07-13T07:35:05.233729+00:00",
+  "updated": "2026-07-13T07:35:05.233735+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_intro.md"
+}

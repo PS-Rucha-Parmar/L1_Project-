@@ -1,0 +1,17 @@
+{
+  "id": "08a81f10-e807-4367-8da1-e8bd9ebd0538",
+  "title": "Hugging Face - Documentation",
+  "library": "huggingface",
+  "topic": "docs",
+  "url": "https://huggingface.co/docs",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 420,
+  "reading_time": "2 min",
+  "created": "2026-07-13T08:56:44.066651+00:00",
+  "updated": "2026-07-13T08:56:44.066659+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs.md"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "00069087-fd42-49de-99cd-f6a2ff3bbb1f",
+  "title": "Usage and Cost API - Claude Platform Docs",
+  "library": "platform",
+  "topic": "api",
+  "url": "https://platform.claude.com/docs/en/build-with-claude/usage-cost-api",
+  "category": "reference",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 1182,
+  "reading_time": "6 min",
+  "created": "2026-07-13T07:52:24.984178+00:00",
+  "updated": "2026-07-13T07:52:24.984187+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_build-with-claude_usage-cost-api.md"
+}

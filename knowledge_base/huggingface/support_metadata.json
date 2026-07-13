@@ -1,0 +1,17 @@
+{
+  "id": "abc98950-5cf1-45ca-970e-cf7e6717f2f3",
+  "title": "Enterprise Support \u2013 Hugging Face",
+  "library": "huggingface",
+  "topic": "support",
+  "url": "https://huggingface.co/support",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 150,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:57:30.344737+00:00",
+  "updated": "2026-07-13T08:57:30.344761+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\support.md"
+}

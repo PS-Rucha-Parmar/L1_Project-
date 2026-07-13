@@ -1,0 +1,17 @@
+{
+  "id": "fdef3a5e-81cb-4a42-9a65-cc71b02c733d",
+  "title": "API overview - Claude Platform Docs",
+  "library": "platform",
+  "topic": "api",
+  "url": "https://platform.claude.com/docs/en/api/overview",
+  "category": "reference",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 1145,
+  "reading_time": "6 min",
+  "created": "2026-07-13T07:36:39.385232+00:00",
+  "updated": "2026-07-13T07:36:39.385239+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_api_overview.md"
+}

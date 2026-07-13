@@ -1,0 +1,17 @@
+{
+  "id": "ec5964dc-93b2-402e-a822-bd33b173ace8",
+  "title": "Datasets \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "datasets",
+  "url": "https://huggingface.co/docs/datasets",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 210,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:57:54.360016+00:00",
+  "updated": "2026-07-13T08:57:54.360029+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_datasets.md"
+}

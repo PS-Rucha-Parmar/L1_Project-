@@ -1,0 +1,17 @@
+{
+  "id": "0883f324-7045-4f5e-a6d9-97b4d2c7f12b",
+  "title": "Claude Cookbook",
+  "library": "platform",
+  "topic": "cookbooks",
+  "url": "https://platform.claude.com/cookbooks",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 2891,
+  "reading_time": "14 min",
+  "created": "2026-07-13T07:53:28.038291+00:00",
+  "updated": "2026-07-13T07:53:28.038301+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\cookbooks.md"
+}

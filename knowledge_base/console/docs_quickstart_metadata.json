@@ -1,0 +1,17 @@
+{
+  "id": "1a611d2b-2e05-4a0b-afee-7b59c598237e",
+  "title": "Quickstart - GroqDocs",
+  "library": "console",
+  "topic": "quickstart",
+  "url": "https://console.groq.com/docs/quickstart",
+  "category": "documentation",
+  "tags": [
+    "groq"
+  ],
+  "word_count": 665,
+  "reading_time": "3 min",
+  "created": "2026-07-12T09:24:34.020150+00:00",
+  "updated": "2026-07-12T09:24:34.020152+00:00",
+  "embedding_status": "pending",
+  "source_file": "/Users/krishivgadani/Desktop/DocAi/knowledge_base/console/docs_quickstart.md"
+}

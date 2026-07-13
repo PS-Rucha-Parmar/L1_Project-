@@ -1,0 +1,17 @@
+{
+  "id": "42da42bc-7a86-414e-96a3-155db7e9747d",
+  "title": "Storage - Hugging Face",
+  "library": "huggingface",
+  "topic": "storage",
+  "url": "https://huggingface.co/storage",
+  "category": "documentation",
+  "tags": [
+    "rag"
+  ],
+  "word_count": 4680,
+  "reading_time": "23 min",
+  "created": "2026-07-13T08:56:49.527120+00:00",
+  "updated": "2026-07-13T08:56:49.527133+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\storage.md"
+}

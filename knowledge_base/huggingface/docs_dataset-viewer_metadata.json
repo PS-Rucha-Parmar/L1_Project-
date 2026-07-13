@@ -1,0 +1,17 @@
+{
+  "id": "b9e1874f-e3f3-40d7-aad5-f63fe5def20b",
+  "title": "\ud83e\udd17 Dataset viewer \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "dataset-viewer",
+  "url": "https://huggingface.co/docs/dataset-viewer",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 407,
+  "reading_time": "2 min",
+  "created": "2026-07-13T08:57:42.991823+00:00",
+  "updated": "2026-07-13T08:57:42.991832+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_dataset-viewer.md"
+}

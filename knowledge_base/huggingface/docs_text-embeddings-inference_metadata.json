@@ -1,0 +1,17 @@
+{
+  "id": "18c110cc-a3fe-4037-956a-4f12998f15df",
+  "title": "Text Embeddings Inference \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "embedding",
+  "url": "https://huggingface.co/docs/text-embeddings-inference",
+  "category": "documentation",
+  "tags": [
+    "embedding"
+  ],
+  "word_count": 217,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:57:48.760098+00:00",
+  "updated": "2026-07-13T08:57:48.760127+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_text-embeddings-inference.md"
+}

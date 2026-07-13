@@ -1,0 +1,17 @@
+{
+  "id": "ed252175-c080-40e4-a439-af4832e200a7",
+  "title": "CLI, SDKs, and libraries - Claude Platform Docs",
+  "library": "platform",
+  "topic": "api",
+  "url": "https://platform.claude.com/docs/en/api/client-sdks",
+  "category": "reference",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 200,
+  "reading_time": "1 min",
+  "created": "2026-07-13T07:39:49.685687+00:00",
+  "updated": "2026-07-13T07:39:49.685694+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_api_client-sdks.md"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "880914af-7411-4f52-a5d7-853a97fc3086",
+  "title": "HuggingChat - Chat with AI models",
+  "library": "huggingface",
+  "topic": "chat",
+  "url": "https://huggingface.co/chat",
+  "category": "documentation",
+  "tags": [
+    "model"
+  ],
+  "word_count": 42,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:56:53.255957+00:00",
+  "updated": "2026-07-13T08:56:53.255969+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\chat.md"
+}

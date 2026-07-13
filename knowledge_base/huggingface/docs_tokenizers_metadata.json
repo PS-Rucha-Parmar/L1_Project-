@@ -1,0 +1,17 @@
+{
+  "id": "e9df7657-0050-4824-b063-fe8c1d273db8",
+  "title": "Tokenizers \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "tokenizers",
+  "url": "https://huggingface.co/docs/tokenizers",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 136,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:57:56.813180+00:00",
+  "updated": "2026-07-13T08:57:56.813188+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_tokenizers.md"
+}

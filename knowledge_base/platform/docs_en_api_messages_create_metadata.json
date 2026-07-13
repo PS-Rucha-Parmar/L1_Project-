@@ -1,0 +1,17 @@
+{
+  "id": "d3847846-eb43-4cea-90e1-0cf93e1745ab",
+  "title": "Create a Message - Claude API Reference",
+  "library": "platform",
+  "topic": "api",
+  "url": "https://platform.claude.com/docs/en/api/messages/create",
+  "category": "reference",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 51,
+  "reading_time": "1 min",
+  "created": "2026-07-13T07:39:18.911267+00:00",
+  "updated": "2026-07-13T07:39:18.911275+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_api_messages_create.md"
+}

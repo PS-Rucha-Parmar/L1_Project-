@@ -1,0 +1,17 @@
+{
+  "id": "a3648157-dcf4-49c2-948e-f5f7ae1e6a40",
+  "title": "https://huggingface.co/join/discord",
+  "library": "huggingface",
+  "topic": "discord",
+  "url": "https://huggingface.co/join/discord",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 77,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:57:28.421656+00:00",
+  "updated": "2026-07-13T08:57:28.421685+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\join_discord.md"
+}

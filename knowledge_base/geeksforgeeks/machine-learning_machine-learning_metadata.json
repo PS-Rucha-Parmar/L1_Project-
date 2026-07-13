@@ -1,0 +1,17 @@
+{
+  "id": "9b2199fa-86ba-44a0-8c42-35b0484a63b5",
+  "title": "Machine Learning Tutorial - GeeksforGeeks",
+  "library": "geeksforgeeks",
+  "topic": "machine-learning",
+  "url": "https://www.geeksforgeeks.org/machine-learning/machine-learning",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 1074,
+  "reading_time": "5 min",
+  "created": "2026-07-13T07:54:22.129477+00:00",
+  "updated": "2026-07-13T07:54:22.129483+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\geeksforgeeks\\machine-learning_machine-learning.md"
+}

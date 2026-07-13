@@ -1,0 +1,17 @@
+{
+  "id": "8a218ea3-6561-4899-821e-3a5e0573566c",
+  "title": "Stop reasons and fallback - Claude Platform Docs",
+  "library": "platform",
+  "topic": "handling-stop-reasons",
+  "url": "https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 2225,
+  "reading_time": "11 min",
+  "created": "2026-07-13T07:56:36.298387+00:00",
+  "updated": "2026-07-13T07:56:36.298394+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_build-with-claude_handling-stop-reasons.md"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "8abee092-fe7b-4f2e-accd-d37c8c8b97b4",
+  "title": "LangChain overview - Docs by LangChain",
+  "library": "langchain",
+  "topic": "introduction",
+  "url": "https://python.langchain.com/docs/introduction",
+  "category": "documentation",
+  "tags": [
+    "langchain",
+    "chain"
+  ],
+  "word_count": 199,
+  "reading_time": "1 min",
+  "created": "2026-07-13T07:52:07.086987+00:00",
+  "updated": "2026-07-13T07:52:07.087006+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\langchain\\docs_introduction.md"
+}

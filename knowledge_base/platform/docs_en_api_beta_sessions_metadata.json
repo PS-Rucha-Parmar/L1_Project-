@@ -1,0 +1,17 @@
+{
+  "id": "3aa64a73-fcb3-4fde-bccd-8f892988b5ab",
+  "title": "Sessions - Claude API Reference",
+  "library": "platform",
+  "topic": "api",
+  "url": "https://platform.claude.com/docs/en/api/beta/sessions",
+  "category": "reference",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 29,
+  "reading_time": "1 min",
+  "created": "2026-07-13T07:40:51.840347+00:00",
+  "updated": "2026-07-13T07:40:51.840358+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_api_beta_sessions.md"
+}

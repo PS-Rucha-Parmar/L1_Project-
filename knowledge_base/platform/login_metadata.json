@@ -1,0 +1,17 @@
+{
+  "id": "3749e61d-fb02-4213-b324-20e66a6d3707",
+  "title": "Sign In | Claude Platform",
+  "library": "platform",
+  "topic": "login",
+  "url": "https://platform.claude.com/login?returnTo=%2Fdocs%2Fen%2Fhome",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 54,
+  "reading_time": "1 min",
+  "created": "2026-07-13T07:37:40.575564+00:00",
+  "updated": "2026-07-13T07:37:40.575574+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\login.md"
+}

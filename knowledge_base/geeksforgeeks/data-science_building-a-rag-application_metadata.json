@@ -1,0 +1,17 @@
+{
+  "id": "f575b063-2b03-49ac-aac7-780abf83a7cf",
+  "title": "Building a RAG Application - GeeksforGeeks",
+  "library": "geeksforgeeks",
+  "topic": "building-a-rag-application",
+  "url": "https://www.geeksforgeeks.org/data-science/building-a-rag-application",
+  "category": "documentation",
+  "tags": [
+    "rag"
+  ],
+  "word_count": 776,
+  "reading_time": "4 min",
+  "created": "2026-07-13T07:51:16.479347+00:00",
+  "updated": "2026-07-13T07:51:16.479356+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\geeksforgeeks\\data-science_building-a-rag-application.md"
+}

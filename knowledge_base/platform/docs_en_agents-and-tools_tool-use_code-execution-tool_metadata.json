@@ -1,0 +1,18 @@
+{
+  "id": "d06b6736-c503-4f94-9edc-a2a0fa4b4f09",
+  "title": "Code execution tool - Claude Platform Docs",
+  "library": "platform",
+  "topic": "agent",
+  "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool",
+  "category": "documentation",
+  "tags": [
+    "agent",
+    "tool"
+  ],
+  "word_count": 2678,
+  "reading_time": "13 min",
+  "created": "2026-07-13T07:46:35.190091+00:00",
+  "updated": "2026-07-13T07:46:35.190100+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_agents-and-tools_tool-use_code-execution-tool.md"
+}

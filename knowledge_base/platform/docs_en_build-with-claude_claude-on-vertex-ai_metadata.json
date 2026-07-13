@@ -1,0 +1,17 @@
+{
+  "id": "cc4c5cb0-0994-42cc-b3fd-b756e6051900",
+  "title": "Claude on Google Cloud - Claude Platform Docs",
+  "library": "platform",
+  "topic": "claude-on-vertex-ai",
+  "url": "https://platform.claude.com/docs/en/build-with-claude/claude-on-vertex-ai",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 913,
+  "reading_time": "5 min",
+  "created": "2026-07-13T07:42:26.389717+00:00",
+  "updated": "2026-07-13T07:42:26.389723+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_build-with-claude_claude-on-vertex-ai.md"
+}

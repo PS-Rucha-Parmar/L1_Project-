@@ -1,0 +1,17 @@
+{
+  "id": "8d0bc736-15c2-4f3f-98b4-10ff537638d1",
+  "title": "Get started with Claude - Claude Platform Docs",
+  "library": "platform",
+  "topic": "get-started",
+  "url": "https://platform.claude.com/docs/en/get-started",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 120,
+  "reading_time": "1 min",
+  "created": "2026-07-13T07:38:11.320271+00:00",
+  "updated": "2026-07-13T07:38:11.320278+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_get-started.md"
+}

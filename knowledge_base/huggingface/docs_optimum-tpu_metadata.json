@@ -1,0 +1,17 @@
+{
+  "id": "2e7eab99-9d1d-414b-9db3-6cbb2985fd9b",
+  "title": "\ud83e\udd17 Optimum TPU \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "optimum-tpu",
+  "url": "https://huggingface.co/docs/optimum-tpu",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 439,
+  "reading_time": "2 min",
+  "created": "2026-07-13T08:58:05.882282+00:00",
+  "updated": "2026-07-13T08:58:05.882296+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_optimum-tpu.md"
+}

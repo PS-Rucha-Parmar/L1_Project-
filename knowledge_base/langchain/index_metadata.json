@@ -1,0 +1,18 @@
+{
+  "id": "d2926cf2-3855-46e7-9b88-91fc34cb3ae6",
+  "title": "Home - Docs by LangChain",
+  "library": "langchain",
+  "topic": "general",
+  "url": "https://docs.langchain.com/",
+  "category": "documentation",
+  "tags": [
+    "langchain",
+    "chain"
+  ],
+  "word_count": 304,
+  "reading_time": "2 min",
+  "created": "2026-07-12T09:53:30.054417+00:00",
+  "updated": "2026-07-12T09:53:30.054420+00:00",
+  "embedding_status": "pending",
+  "source_file": "/Users/krishivgadani/Desktop/DocAi/knowledge_base/langchain/index.md"
+}

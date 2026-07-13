@@ -1,0 +1,17 @@
+{
+  "id": "33f82bf5-6fcc-42d3-b03a-da2e6526bcae",
+  "title": "Increase output consistency - Claude Platform Docs",
+  "library": "platform",
+  "topic": "increase-consistency",
+  "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/increase-consistency",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 212,
+  "reading_time": "1 min",
+  "created": "2026-07-13T07:50:16.379185+00:00",
+  "updated": "2026-07-13T07:50:16.379207+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_test-and-evaluate_strengthen-guardrails_increase-consistency.md"
+}

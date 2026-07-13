@@ -1,0 +1,17 @@
+{
+  "id": "2c78d07f-21b5-49f5-bd20-7dac137f6472",
+  "title": "Accelerate \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "accelerate",
+  "url": "https://huggingface.co/docs/accelerate",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 242,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:58:02.709245+00:00",
+  "updated": "2026-07-13T08:58:02.709255+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_accelerate.md"
+}

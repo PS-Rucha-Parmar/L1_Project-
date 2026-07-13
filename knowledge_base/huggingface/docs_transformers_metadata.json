@@ -1,0 +1,17 @@
+{
+  "id": "f329c870-97a1-4c4c-9de0-52dfc5f09f27",
+  "title": "Transformers \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "transformers",
+  "url": "https://huggingface.co/docs/transformers",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 439,
+  "reading_time": "2 min",
+  "created": "2026-07-13T08:57:52.136325+00:00",
+  "updated": "2026-07-13T08:57:52.136336+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_transformers.md"
+}

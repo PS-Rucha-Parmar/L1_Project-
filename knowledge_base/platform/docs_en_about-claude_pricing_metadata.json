@@ -1,0 +1,17 @@
+{
+  "id": "5cb71d28-0038-44ca-a505-973f2dbb72f8",
+  "title": "Pricing - Claude Platform Docs",
+  "library": "platform",
+  "topic": "pricing",
+  "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 3773,
+  "reading_time": "19 min",
+  "created": "2026-07-13T07:51:18.389273+00:00",
+  "updated": "2026-07-13T07:51:18.389281+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_about-claude_pricing.md"
+}

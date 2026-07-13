@@ -1,0 +1,17 @@
+{
+  "id": "0668f2c7-d042-4611-9007-d7f701edb270",
+  "title": "Streamlit documentation",
+  "library": "streamlit",
+  "topic": "general",
+  "url": "https://docs.streamlit.io/",
+  "category": "documentation",
+  "tags": [
+    "streamlit"
+  ],
+  "word_count": 522,
+  "reading_time": "3 min",
+  "created": "2026-07-12T09:30:20.564029+00:00",
+  "updated": "2026-07-12T09:30:20.564032+00:00",
+  "embedding_status": "pending",
+  "source_file": "/Users/krishivgadani/Desktop/DocAi/knowledge_base/streamlit/index.md"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "f48f8cb5-744d-4305-a199-df21cfcff0aa",
+  "title": "Web search tool - Claude Platform Docs",
+  "library": "platform",
+  "topic": "agent",
+  "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool",
+  "category": "documentation",
+  "tags": [
+    "agent",
+    "tool"
+  ],
+  "word_count": 2026,
+  "reading_time": "10 min",
+  "created": "2026-07-13T07:46:03.538665+00:00",
+  "updated": "2026-07-13T07:46:03.538671+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_agents-and-tools_tool-use_web-search-tool.md"
+}

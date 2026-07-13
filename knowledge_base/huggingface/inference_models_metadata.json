@@ -1,0 +1,17 @@
+{
+  "id": "1ef236a5-aac3-412e-b3b5-8989bc16f36b",
+  "title": "Hugging Face Inference Providers \u00b7 Supported Models",
+  "library": "huggingface",
+  "topic": "model",
+  "url": "https://huggingface.co/inference/models",
+  "category": "documentation",
+  "tags": [
+    "model"
+  ],
+  "word_count": 3864,
+  "reading_time": "19 min",
+  "created": "2026-07-13T08:57:32.653947+00:00",
+  "updated": "2026-07-13T08:57:32.653970+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\inference_models.md"
+}

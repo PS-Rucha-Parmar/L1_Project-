@@ -1,0 +1,17 @@
+{
+  "id": "82a20643-7f01-408f-810b-56e4ec491c44",
+  "title": "Feature Engineering - GeeksforGeeks",
+  "library": "geeksforgeeks",
+  "topic": "what-is-feature-engineering",
+  "url": "https://www.geeksforgeeks.org/machine-learning/what-is-feature-engineering",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 580,
+  "reading_time": "3 min",
+  "created": "2026-07-13T08:03:27.267709+00:00",
+  "updated": "2026-07-13T08:03:27.267720+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\geeksforgeeks\\machine-learning_what-is-feature-engineering.md"
+}

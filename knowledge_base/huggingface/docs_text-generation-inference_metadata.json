@@ -1,0 +1,17 @@
+{
+  "id": "8e392c40-501a-4abc-b2b2-4998b67e87f3",
+  "title": "Text Generation Inference \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "text-generation-inference",
+  "url": "https://huggingface.co/docs/text-generation-inference",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 303,
+  "reading_time": "2 min",
+  "created": "2026-07-13T08:57:47.644740+00:00",
+  "updated": "2026-07-13T08:57:47.644749+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_text-generation-inference.md"
+}

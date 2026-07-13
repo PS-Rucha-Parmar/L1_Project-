@@ -1,0 +1,17 @@
+{
+  "id": "149e0ceb-7245-4338-8fe1-d6d5f0a0cf6f",
+  "title": "Evaluate on the Hub \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "evaluate",
+  "url": "https://huggingface.co/docs/evaluate",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 731,
+  "reading_time": "4 min",
+  "created": "2026-07-13T08:57:58.060174+00:00",
+  "updated": "2026-07-13T08:57:58.060184+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_evaluate.md"
+}

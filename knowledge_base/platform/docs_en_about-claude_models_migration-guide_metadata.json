@@ -1,0 +1,17 @@
+{
+  "id": "e84e0591-1671-458e-b3fc-872d4e1110a7",
+  "title": "Migration guide - Claude Platform Docs",
+  "library": "platform",
+  "topic": "model",
+  "url": "https://platform.claude.com/docs/en/about-claude/models/migration-guide",
+  "category": "guide",
+  "tags": [
+    "model"
+  ],
+  "word_count": 6614,
+  "reading_time": "33 min",
+  "created": "2026-07-13T07:52:57.386885+00:00",
+  "updated": "2026-07-13T07:52:57.386892+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_about-claude_models_migration-guide.md"
+}

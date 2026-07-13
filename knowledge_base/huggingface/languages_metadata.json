@@ -1,0 +1,17 @@
+{
+  "id": "e54b5a0b-5c00-45e2-93a6-905d5364a8b9",
+  "title": "Languages - Hugging Face",
+  "library": "huggingface",
+  "topic": "languages",
+  "url": "https://huggingface.co/languages",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 45227,
+  "reading_time": "226 min",
+  "created": "2026-07-13T08:57:00.703882+00:00",
+  "updated": "2026-07-13T08:57:00.703892+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\languages.md"
+}

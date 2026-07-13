@@ -1,0 +1,17 @@
+{
+  "id": "d3cb65e6-dfb0-451a-bf50-6a66fe5619ab",
+  "title": "Team & Enterprise Plans - Hugging Face",
+  "library": "huggingface",
+  "topic": "enterprise",
+  "url": "https://huggingface.co/enterprise",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 4962,
+  "reading_time": "25 min",
+  "created": "2026-07-13T08:56:50.508730+00:00",
+  "updated": "2026-07-13T08:56:50.508743+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\enterprise.md"
+}

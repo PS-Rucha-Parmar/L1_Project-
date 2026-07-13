@@ -1,0 +1,17 @@
+{
+  "id": "7712e885-82ca-40f8-af56-b3cccd49e934",
+  "title": "Pandas Tutorial - GeeksforGeeks",
+  "library": "geeksforgeeks",
+  "topic": "tutorial",
+  "url": "https://www.geeksforgeeks.org/pandas/pandas-tutorial",
+  "category": "guide",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 749,
+  "reading_time": "4 min",
+  "created": "2026-07-13T07:55:56.524635+00:00",
+  "updated": "2026-07-13T07:55:56.524641+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\geeksforgeeks\\pandas_pandas-tutorial.md"
+}

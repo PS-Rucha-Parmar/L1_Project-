@@ -1,0 +1,17 @@
+{
+  "id": "6fb94387-e4ab-40a6-96a3-d5e264e58c00",
+  "title": "Admin API - Claude Platform Docs",
+  "library": "platform",
+  "topic": "api",
+  "url": "https://platform.claude.com/docs/en/manage-claude/admin-api",
+  "category": "reference",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 990,
+  "reading_time": "5 min",
+  "created": "2026-07-13T07:36:07.729374+00:00",
+  "updated": "2026-07-13T07:36:07.729390+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_manage-claude_admin-api.md"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "646081a9-77b1-4cba-8613-abb9f5ef2b64",
+  "title": "Kernels \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "kernels",
+  "url": "https://huggingface.co/docs/kernels",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 291,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:58:00.380677+00:00",
+  "updated": "2026-07-13T08:58:00.380693+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_kernels.md"
+}

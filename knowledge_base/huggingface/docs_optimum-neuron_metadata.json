@@ -1,0 +1,17 @@
+{
+  "id": "7b40be5f-9256-493d-8c2b-f94de65dfd6f",
+  "title": "\ud83e\udd17 Optimum Neuron \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "optimum-neuron",
+  "url": "https://huggingface.co/docs/optimum-neuron",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 156,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:58:04.797589+00:00",
+  "updated": "2026-07-13T08:58:04.797600+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_optimum-neuron.md"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "367dc8d7-2631-4bae-b654-5a4770b0db23",
+  "title": "Embeddings - Claude Platform Docs",
+  "library": "platform",
+  "topic": "embedding",
+  "url": "https://platform.claude.com/docs/en/build-with-claude/embeddings",
+  "category": "documentation",
+  "tags": [
+    "embedding"
+  ],
+  "word_count": 1327,
+  "reading_time": "7 min",
+  "created": "2026-07-13T08:02:22.838547+00:00",
+  "updated": "2026-07-13T08:02:22.838558+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_build-with-claude_embeddings.md"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ec847549-40b0-4234-a8fb-aa1f4b68cb78",
+  "title": "Streaming refusals - Claude Platform Docs",
+  "library": "platform",
+  "topic": "handle-streaming-refusals",
+  "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/handle-streaming-refusals",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 665,
+  "reading_time": "3 min",
+  "created": "2026-07-13T08:01:19.738149+00:00",
+  "updated": "2026-07-13T08:01:19.738158+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_test-and-evaluate_strengthen-guardrails_handle-streaming-refusals.md"
+}

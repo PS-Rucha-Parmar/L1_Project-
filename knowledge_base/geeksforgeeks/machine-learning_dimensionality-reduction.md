@@ -1,0 +1,106 @@
+---
+title: "Introduction to Dimensionality Reduction - GeeksforGeeks"
+url: "https://www.geeksforgeeks.org/machine-learning/dimensionality-reduction"
+library: "geeksforgeeks"
+created: "2026-07-13T08:03:58.158586+00:00"
+---
+
+# Overview
+
+Dimensionality reduction is a technique used to reduce the number of features in a dataset while preserving important information. It transforms high-dimensional data into a lower-dimensional space for simpler representation.
+
+- Reduces computation time by lowering the number of features
+- Helps prevent overfitting by removing irrelevant data
+- Improves data visualization and understanding
+
+For example, when you are building a model to predict house prices with features like bedrooms, square footage and location. If you add too many features such as room condition or flooring type, the dataset becomes large and complex.
+
+## Working
+
+Lets understand how dimensionality Reduction is used with the help of example. Imagine a dataset where each data point exists in a 3D space defined by axes X, Y and Z. If most of the data variance occurs along X and Y then the Z-dimension may contribute very little to understanding the structure of the data.
+
+- Before Reduction we can see that data exist in 3D (X,Y,Z). It has high redundancy and Z contributes little meaningful information
+- On the right after reducing the dimensionality the data is represented in lower-dimensional spaces. The top plot (X-Y) maintains the meaningful structure while the bottom plot (Z-Y) shows that the Z-dimension contributed little useful information.
+
+This process makes data analysis more efficient hence improving computation speed and visualization while minimizing redundancy
+
+## Dimensionality Reduction Techniques
+
+Dimensionality reduction techniques can be broadly divided into two categories:
+
+**1. Feature Selection**
+
+**1. Feature Selection**
+
+Feature selection** **chooses the most relevant features from the dataset without altering them. It helps remove redundant or irrelevant features, improving model efficiency. Some common methods are:
+
+- **Filter methods**- **:**
+- **Wrapper methods**
+- **Embedded methods**
+- **Missing Value Ratio:**
+- **Backward Feature Elimination:**
+- **Forward Feature Selection:**
+- **Random Forest**- **:**
+
+**2. Feature Extraction**
+
+**2. Feature Extraction**
+
+Feature extraction involves creating new features by combining or transforming the original features. These new features retain most of the dataset’s important information in fewer dimensions. Common feature extraction methods are:
+
+- **Principal Component Analysis (PCA):**- **Factor Analysis:**- **Independent Component Analysis (ICA):**
+
+**Real World Use Case**
+
+**Real World Use Case**
+
+- **Text categorization:**
+- **Image retrieval:**
+- **Gene expression analysis:**
+- **Intrusion detection**
+
+**Advantages**
+
+**Advantages**
+
+- Reduces computation time as models process fewer features.
+- Makes data easier to visualize and understand patterns.
+- Helps reduce overfitting and improves model generalization.
+
+**Disadvantages**
+
+**Disadvantages**
+
+- May lead to loss of important information from the data.
+- Choosing the right number of dimensions can be challenging.
+- Excessive reduction can negatively affect model accuracy.
+
+# Concepts
+
+# Architecture
+
+# Workflow
+
+# API
+
+# Parameters
+
+# Return Values
+
+# Code Example
+
+# Output
+
+# Notes
+
+# Best Practices
+
+# Common Mistakes
+
+# Performance Notes
+
+# Related Topics
+
+# References
+
+- Source: [https://www.geeksforgeeks.org/machine-learning/dimensionality-reduction](https://www.geeksforgeeks.org/machine-learning/dimensionality-reduction)

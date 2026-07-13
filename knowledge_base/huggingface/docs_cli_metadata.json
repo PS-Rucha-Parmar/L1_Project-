@@ -1,0 +1,17 @@
+{
+  "id": "f8840bcb-ef23-4a79-83c2-8e8a5fa8d194",
+  "title": "Command Line Interface (CLI) \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "cli",
+  "url": "https://huggingface.co/docs/cli",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 11640,
+  "reading_time": "58 min",
+  "created": "2026-07-13T08:57:40.400389+00:00",
+  "updated": "2026-07-13T08:57:40.400404+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_cli.md"
+}

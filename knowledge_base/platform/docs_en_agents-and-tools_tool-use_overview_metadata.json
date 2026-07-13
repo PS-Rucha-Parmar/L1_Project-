@@ -1,0 +1,18 @@
+{
+  "id": "19b886a3-42c2-417b-9b9e-88bf9a335bd8",
+  "title": "Tool use with Claude - Claude Platform Docs",
+  "library": "platform",
+  "topic": "agent",
+  "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview",
+  "category": "concept",
+  "tags": [
+    "agent",
+    "tool"
+  ],
+  "word_count": 1143,
+  "reading_time": "6 min",
+  "created": "2026-07-13T07:45:32.727680+00:00",
+  "updated": "2026-07-13T07:45:32.727690+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\platform\\docs_en_agents-and-tools_tool-use_overview.md"
+}

@@ -1,0 +1,96 @@
+---
+title: "Sessions - Claude API Reference"
+url: "https://platform.claude.com/docs/en/api/beta/sessions"
+library: "platform"
+created: "2026-07-13T07:40:51.839434+00:00"
+---
+
+# Overview
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+Loading...
+
+# Concepts
+
+# Architecture
+
+# Workflow
+
+# API
+
+# Parameters
+
+# Return Values
+
+# Code Example
+
+# Output
+
+# Notes
+
+# Best Practices
+
+# Common Mistakes
+
+# Performance Notes
+
+# Related Topics
+
+# References
+
+- Source: [https://platform.claude.com/docs/en/api/beta/sessions](https://platform.claude.com/docs/en/api/beta/sessions)

@@ -1,0 +1,17 @@
+{
+  "id": "d1558d68-4b64-43f5-b9f3-70b851b14903",
+  "title": "GeeksforGeeks | Your All-in-One Learning Portal",
+  "library": "geeksforgeeks",
+  "topic": "general",
+  "url": "https://www.geeksforgeeks.org/",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 267,
+  "reading_time": "1 min",
+  "created": "2026-07-13T07:51:46.718121+00:00",
+  "updated": "2026-07-13T07:51:46.718134+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\geeksforgeeks\\index.md"
+}

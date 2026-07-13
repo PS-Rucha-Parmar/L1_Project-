@@ -1,0 +1,17 @@
+{
+  "id": "a13e24d2-e4df-46b7-ac59-7f51a6aec4ae",
+  "title": "Pricing - Hugging Face",
+  "library": "huggingface",
+  "topic": "pricing",
+  "url": "https://huggingface.co/pricing",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 4665,
+  "reading_time": "23 min",
+  "created": "2026-07-13T08:56:51.383416+00:00",
+  "updated": "2026-07-13T08:56:51.383423+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\pricing.md"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "f8d37b83-e5cf-43a5-8952-76e2f5cdfc81",
+  "title": "Overview - GroqDocs",
+  "library": "console",
+  "topic": "docs",
+  "url": "https://console.groq.com/docs",
+  "category": "documentation",
+  "tags": [
+    "groq"
+  ],
+  "word_count": 485,
+  "reading_time": "2 min",
+  "created": "2026-07-12T09:27:32.724066+00:00",
+  "updated": "2026-07-12T09:27:32.724068+00:00",
+  "embedding_status": "pending",
+  "source_file": "/Users/krishivgadani/Desktop/DocAi/knowledge_base/console/docs.md"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "57a5ec0e-3d95-4d30-8ef6-0cfde836068a",
+  "title": "Hugging Face on Google Cloud \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "google-cloud",
+  "url": "https://huggingface.co/docs/google-cloud",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 428,
+  "reading_time": "2 min",
+  "created": "2026-07-13T08:57:50.975204+00:00",
+  "updated": "2026-07-13T08:57:50.975219+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_google-cloud.md"
+}

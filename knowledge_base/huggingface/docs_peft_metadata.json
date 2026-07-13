@@ -1,0 +1,17 @@
+{
+  "id": "c27ee833-6399-4dd4-bcb1-596352ad09ad",
+  "title": "PEFT \u00b7 Hugging Face",
+  "library": "huggingface",
+  "topic": "peft",
+  "url": "https://huggingface.co/docs/peft",
+  "category": "documentation",
+  "tags": [
+    "documentation"
+  ],
+  "word_count": 206,
+  "reading_time": "1 min",
+  "created": "2026-07-13T08:58:01.576658+00:00",
+  "updated": "2026-07-13T08:58:01.576669+00:00",
+  "embedding_status": "pending",
+  "source_file": "C:\\Users\\RuchaParmar\\Downloads\\DocAi\\DocAi\\knowledge_base\\huggingface\\docs_peft.md"
+}
