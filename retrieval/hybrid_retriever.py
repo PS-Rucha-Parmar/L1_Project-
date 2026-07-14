@@ -210,11 +210,19 @@ class CrossEncoderReranker:
         try:
             scores = self._model.predict(pairs)
             ranked = sorted(zip(results, scores), key=lambda x: float(x[1]), reverse=True)
+
+            # Cross-encoder scores are raw logits (typically -10 to +10).
+            # Convert to [0, 1] via sigmoid so they are compatible with
+            # the retrieval_min_score threshold in rag_chain.py.
+            import math
+            def sigmoid(x: float) -> float:
+                return 1.0 / (1.0 + math.exp(-x))
+
             out = []
             for r, s in ranked[:top_n]:
-                r.score = float(s)
+                r.score = round(sigmoid(float(s)), 4)
                 out.append(r)
-            logger.info("Reranked %d → %d results.", len(results), len(out))
+            logger.info("Reranked %d → %d results (scores normalized via sigmoid).", len(results), len(out))
             return out
         except Exception as exc:
             logger.warning("Reranking failed: %s – using original order.", exc)
@@ -252,10 +260,22 @@ def _reciprocal_rank_fusion(
                 doc_map[key] = result
 
     sorted_keys = sorted(scores, key=lambda k: scores[k], reverse=True)
+
+    # Normalize RRF scores to [0, 1] range.
+    # Raw RRF scores are tiny (e.g. 0.016 for rank-1 with rrf_k=60).
+    # Without normalization, ALL scores fall below the retrieval_min_score
+    # threshold in rag_chain.py and the answer is always "not available".
+    raw_vals = [scores[k] for k in sorted_keys]
+    min_s = min(raw_vals) if raw_vals else 0.0
+    max_s = max(raw_vals) if raw_vals else 1.0
+    score_range = max_s - min_s if max_s != min_s else 1.0
+
     fused: list = []
     for key in sorted_keys:
         r = doc_map[key]
-        r.score = scores[key]   # replace original score with RRF score
+        # Scale to [0.5, 1.0] so top results are clearly above any threshold.
+        normalised = 0.5 + 0.5 * (scores[key] - min_s) / score_range
+        r.score = round(normalised, 4)
         fused.append(r)
     return fused
 
