@@ -82,7 +82,7 @@ def setup_logging(log_dir: Path | None = None, log_level: str = "INFO") -> None:
         logging.getLogger(noisy).setLevel(logging.WARNING)
 
     logging.getLogger(__name__).info(
-        "Logging initialised – level=%s, log_file=%s", log_level, log_file
+        "Logging initialised - level=%s, log_file=%s", log_level, log_file
     )
 
 

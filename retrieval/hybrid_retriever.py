@@ -106,7 +106,7 @@ class BM25Index:
         try:
             from rank_bm25 import BM25Okapi  # noqa: PLC0415
         except ImportError:
-            logger.warning("rank-bm25 not installed – BM25 search disabled.")
+            logger.warning("rank-bm25 not installed - BM25 search disabled.")
             return
 
         store = _get_store()
@@ -185,7 +185,7 @@ class CrossEncoderReranker:
             self._model = CrossEncoder(self._model_name, max_length=512)
             logger.info("Cross-encoder loaded.")
         except Exception as exc:
-            logger.warning("Cross-encoder unavailable (%s) – skipping rerank.", exc)
+            logger.warning("Cross-encoder unavailable (%s) - skipping rerank.", exc)
 
     def rerank(self, query: str, results: list, top_n: int) -> list:
         """
@@ -222,10 +222,10 @@ class CrossEncoderReranker:
             for r, s in ranked[:top_n]:
                 r.score = round(sigmoid(float(s)), 4)
                 out.append(r)
-            logger.info("Reranked %d → %d results (scores normalized via sigmoid).", len(results), len(out))
+            logger.info("Reranked %d -> %d results (scores normalized via sigmoid).", len(results), len(out))
             return out
         except Exception as exc:
-            logger.warning("Reranking failed: %s – using original order.", exc)
+            logger.warning("Reranking failed: %s - using original order.", exc)
             return results[:top_n]
 
 
@@ -362,7 +362,7 @@ class HybridRetriever:
 
         elapsed = time.monotonic() - t0
         logger.info(
-            "Hybrid retrieval | semantic=%d | bm25=%d → fused=%d | final=%d | %.3fs",
+            "Hybrid retrieval | semantic=%d | bm25=%d -> fused=%d | final=%d | %.3fs",
             len(semantic), len(bm25), len(fused), len(top), elapsed,
         )
         return top

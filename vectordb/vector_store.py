@@ -109,7 +109,7 @@ class VectorStore:
             ids       : Optional explicit IDs (must match length of texts).
         """
         if not texts:
-            logger.warning("add_chunks called with empty texts list – skipping.")
+            logger.warning("add_chunks called with empty texts list - skipping.")
             return
 
         if self._store is None:

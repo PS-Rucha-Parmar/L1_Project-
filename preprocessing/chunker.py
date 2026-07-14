@@ -137,7 +137,7 @@ def chunk_document(
         chunks.append(chunk)
 
     logger.debug(
-        "Chunked document | source=%s | segments=%d → chunks=%d",
+        "Chunked document | source=%s | segments=%d -> chunks=%d",
         source_url or "<unknown>",
         len(semantic_segments),
         len(chunks),
