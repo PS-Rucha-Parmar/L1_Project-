@@ -116,8 +116,24 @@ class Searcher:
         t0 = time.monotonic()
 
         if _method == "mmr":
+            # MMR doesn't return scores natively. We run an additional
+            # similarity_search_with_relevance_scores to get meaningful scores,
+            # then merge them by page content for ranking.
             docs = self._store.mmr_search(query, k=_k, filter=filter)
-            results = [_doc_to_result(doc, score=1.0) for doc in docs]
+            # Assign a real relevance score via a parallel similarity lookup.
+            try:
+                scored_pairs = self._store.similarity_search(query, k=_k * 2, filter=filter)
+                score_map: dict[str, float] = {
+                    doc.page_content[:200]: score
+                    for doc, score in scored_pairs
+                }
+                results = [
+                    _doc_to_result(doc, score=score_map.get(doc.page_content[:200], 0.5))
+                    for doc in docs
+                ]
+            except Exception:
+                # Fallback: assign a default neutral score so the pipeline doesn't block
+                results = [_doc_to_result(doc, score=0.5) for doc in docs]
         else:
             pairs = self._store.similarity_search(
                 query, k=_k, filter=filter, score_threshold=score_threshold

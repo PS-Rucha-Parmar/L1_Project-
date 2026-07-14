@@ -62,16 +62,88 @@ class Settings(BaseSettings):
     )
 
     # ------------------------------------------------------------------
-    # Crawler
+    # Crawler — core
     # ------------------------------------------------------------------
     firecrawl_api_key: str = Field(default="", description="Firecrawl API key.")
     crawler_type: Literal["firecrawl", "crawl4ai", "trafilatura", "beautifulsoup"] = Field(
         default="trafilatura",
-        description="Crawler backend to use (highest-priority available).",
+        description="Preferred crawler backend (used as first choice by the router).",
     )
     max_depth: int = Field(default=3, ge=1, description="Maximum crawl depth.")
     concurrent_requests: int = Field(
         default=5, ge=1, le=20, description="Parallel HTTP requests during crawl."
+    )
+
+    # ------------------------------------------------------------------
+    # Crawler — politeness
+    # ------------------------------------------------------------------
+    crawl_delay_seconds: float = Field(
+        default=0.5,
+        ge=0.0,
+        description="Minimum seconds between consecutive requests to the same domain.",
+    )
+    crawl_force_robots: bool = Field(
+        default=False,
+        description=(
+            "If True, URLs disallowed by robots.txt are skipped entirely. "
+            "If False, a warning is logged but crawling proceeds (useful for "
+            "documentation sites that block all bots indiscriminately)."
+        ),
+    )
+
+    # ------------------------------------------------------------------
+    # Crawler — URL filtering
+    # ------------------------------------------------------------------
+    crawl_allow_pdf: bool = Field(
+        default=False,
+        description="If True, PDF URLs are crawled instead of filtered out.",
+    )
+    crawl_allowed_domains: list[str] = Field(
+        default_factory=list,
+        description=(
+            "Explicit list of allowed domain names (e.g. ['docs.python.org']). "
+            "Empty = same-domain-only restriction."
+        ),
+    )
+    crawl_allowed_prefixes: list[str] = Field(
+        default_factory=list,
+        description=(
+            "Explicit list of allowed URL prefixes. "
+            "Takes precedence over crawl_allowed_domains."
+        ),
+    )
+
+    # ------------------------------------------------------------------
+    # Crawler — content validation
+    # ------------------------------------------------------------------
+    crawl_min_content_chars: int = Field(
+        default=150,
+        ge=10,
+        description="Minimum character count for a page to be ingested.",
+    )
+    crawl_min_content_words: int = Field(
+        default=30,
+        ge=5,
+        description="Minimum word count for a page to be ingested.",
+    )
+
+    # ------------------------------------------------------------------
+    # Crawler — backend behaviour
+    # ------------------------------------------------------------------
+    crawl_backend_timeout_seconds: int = Field(
+        default=30,
+        ge=5,
+        le=120,
+        description="Per-request timeout in seconds for all crawler backends.",
+    )
+    crawl_max_retries_per_backend: int = Field(
+        default=2,
+        ge=1,
+        le=5,
+        description=(
+            "Maximum retry attempts per backend before escalating to the next backend. "
+            "Reduced from the original 3 to limit Firecrawl API costs."
+        ),
     )
 
     # ------------------------------------------------------------------
@@ -112,6 +184,18 @@ class Settings(BaseSettings):
     retrieval_method: Literal["similarity", "mmr"] = Field(
         default="mmr",
         description="Retrieval strategy: similarity search or MMR.",
+    )
+    retrieval_min_score: float = Field(
+        default=0.1,
+        ge=0.0,
+        le=1.0,
+        description=(
+            "Minimum similarity score for a chunk to be included in the LLM context. "
+            "Chunks below this score are discarded before generation. "
+            "Lower values = more permissive (good for broad/comparison queries). "
+            "Higher values = stricter relevance (good for narrow factual queries). "
+            "Default 0.1 replaced the previous hardcoded 0.3 which was too aggressive."
+        ),
     )
     mmr_fetch_k: int = Field(
         default=30,

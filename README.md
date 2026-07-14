@@ -23,8 +23,9 @@
    - [RAG Pipeline](#8-rag-pipeline)
 6. [Running the Streamlit App](#running-the-streamlit-app)
 7. [Running Tests](#running-tests)
-8. [Troubleshooting](#troubleshooting)
-9. [Future Improvements](#future-improvements)
+8. [Changelog](#changelog)
+9. [Troubleshooting](#troubleshooting)
+10. [Future Improvements](#future-improvements)
 
 ---
 
@@ -35,17 +36,13 @@ Documentation URL(s)
        │
        ▼
 ┌──────────────┐
-│   Crawler    │  Firecrawl → Crawl4AI → Trafilatura → BeautifulSoup (priority order)
+│   Crawler    │  BackendRouter → Firecrawl / Crawl4AI / Trafilatura / BeautifulSoup
+│              │  URLFilter → RobotsChecker → CrawlLimiter → ContentValidator
 └──────┬───────┘
-       │ raw HTML / Markdown
+       │ clean Markdown + CrawlEvent log
        ▼
 ┌──────────────┐
-│  Preprocessor│  Clean → Structure → Convert to Markdown → Generate metadata.json
-└──────┬───────┘
-       │ clean Markdown + metadata
-       ▼
-┌──────────────┐
-│   Chunker    │  Semantic chunking → RecursiveCharacterTextSplitter fallback
+│  Preprocessor│  Clean → Chunk → Generate metadata.json
 └──────┬───────┘
        │ text chunks + metadata
        ▼
@@ -80,8 +77,22 @@ DocAi/
 │   ├── settings.py          # Pydantic-settings configuration singleton
 │   └── logging_config.py    # Rotating file + console logging setup
 ├── crawler/
-│   ├── __init__.py
-│   └── spider.py            # Multi-strategy web crawler with retry logic
+│   ├── __init__.py          # Public API: crawl(), DocumentationSpider
+│   ├── spider.py            # Slim orchestrator (~200 lines)
+│   ├── backends/
+│   │   ├── __init__.py
+│   │   ├── base.py          # CrawlResult, ErrorType, _BaseCrawler
+│   │   ├── firecrawl.py     # Cloud API backend (JS-heavy pages)
+│   │   ├── crawl4ai.py      # Async Playwright backend
+│   │   ├── trafilatura.py   # Fast HTTP extraction backend
+│   │   └── beautifulsoup.py # Reliable HTML-parsing fallback
+│   ├── router.py            # Intelligent backend selection + smart retry
+│   ├── filters.py           # URL canonicalization, filtering, domain restriction
+│   ├── politeness.py        # robots.txt enforcement + per-domain rate limiting
+│   ├── validator.py         # Content quality validation (error/CAPTCHA/login detection)
+│   ├── extractor.py         # Link extraction (HTML + Markdown) + MarkdownBuilder
+│   ├── queue.py             # BFS/DFS/priority queue with deduplication
+│   └── report.py            # CrawlEvent per-URL + IngestionReport + JSON output
 ├── preprocessing/
 │   ├── __init__.py
 │   ├── cleaner.py           # HTML / Markdown cleaning pipeline
@@ -95,7 +106,7 @@ DocAi/
 │   └── vector_store.py      # Chroma & FAISS store factory + persistence helpers
 ├── retrieval/
 │   ├── __init__.py
-│   └── searcher.py          # Similarity search, MMR, Top-K, metadata filters
+│   └── searcher.py          # Similarity search, MMR (with real scores), Top-K, metadata filters
 ├── pipeline/
 │   ├── __init__.py
 │   └── rag_chain.py         # LangGraph RAG workflow with citation handling
@@ -111,7 +122,7 @@ DocAi/
 ├── logs/                    # Rotating application logs (auto-created)
 ├── knowledge_base/          # Ingested Markdown documents + metadata.json files
 │   ├── langchain/
-│   ├── langgraph/
+│   │   └── crawl_report.json  # Per-URL crawl event log (NEW)
 │   └── ...                  # One folder per documentation source
 ├── vectordb_storage/        # Persisted vector index files (auto-created)
 ├── requirements.txt
@@ -132,13 +143,13 @@ DocAi/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourorg/docai.git
-cd docai
+git clone https://github.com/PS-Rucha-Parmar/L1_Project-.git
+cd L1_Project-
 
 # 2. Create and activate a virtual environment
 python -m venv .venv
 source .venv/bin/activate   # macOS / Linux
-# .venv\Scripts\activate    # Windows
+# .venv\Scripts\Activate.ps1  # Windows PowerShell
 
 # 3. Install dependencies
 pip install -r requirements.txt
@@ -151,23 +162,73 @@ cp .env.example .env
 # Edit .env with your API keys and preferred settings
 ```
 
+### Running (Short Form — no activation needed)
+
+```powershell
+# From the project root (DocAi/DocAi/)
+..\.venv\Scripts\streamlit run ui\app.py
+```
+
 ---
 
 ## Configuration
 
-All configuration is managed through the `.env` file. See `.env.example` for the full list of variables.
+All configuration is managed through the `.env` file. See `.env.example` for the full list.
+
+### LLM
 
 | Variable | Default | Description |
 |---|---|---|
 | `LLM_PROVIDER` | `groq` | LLM backend: `groq`, `openai`, `anthropic` |
 | `LLM_MODEL` | `llama3-8b-8192` | Model identifier |
-| `CRAWLER_TYPE` | `trafilatura` | Crawler backend priority |
+| `LLM_TEMPERATURE` | `0.0` | Sampling temperature |
+
+### Crawler — Core
+
+| Variable | Default | Description |
+|---|---|---|
+| `CRAWLER_TYPE` | `trafilatura` | Preferred backend (router still escalates automatically) |
+| `MAX_DEPTH` | `3` | Maximum recursive link depth |
+| `CONCURRENT_REQUESTS` | `5` | Parallel requests (reserved for future async mode) |
+
+### Crawler — Politeness (NEW)
+
+| Variable | Default | Description |
+|---|---|---|
+| `CRAWL_DELAY_SECONDS` | `0.5` | Min seconds between requests to same domain |
+| `CRAWL_FORCE_ROBOTS` | `false` | Enforce robots.txt disallow rules strictly |
+
+### Crawler — URL Filtering (NEW)
+
+| Variable | Default | Description |
+|---|---|---|
+| `CRAWL_ALLOW_PDF` | `false` | Include PDF files in crawl |
+| `CRAWL_ALLOWED_DOMAINS` | *(empty)* | Comma-separated domain allowlist |
+| `CRAWL_ALLOWED_PREFIXES` | *(empty)* | Comma-separated URL prefix allowlist |
+
+### Crawler — Content Validation (NEW)
+
+| Variable | Default | Description |
+|---|---|---|
+| `CRAWL_MIN_CONTENT_CHARS` | `150` | Reject pages shorter than this |
+| `CRAWL_MIN_CONTENT_WORDS` | `30` | Reject pages with fewer words |
+
+### Crawler — Backend Behaviour (NEW)
+
+| Variable | Default | Description |
+|---|---|---|
+| `CRAWL_BACKEND_TIMEOUT_SECONDS` | `30` | Per-request timeout for all backends |
+| `CRAWL_MAX_RETRIES_PER_BACKEND` | `2` | Max retries before escalating to next backend |
+
+### Embeddings & Retrieval
+
+| Variable | Default | Description |
+|---|---|---|
 | `EMBEDDING_MODEL` | `BAAI/bge-small-en-v1.5` | SentenceTransformer model |
 | `VECTOR_DB_TYPE` | `chroma` | `chroma` or `faiss` |
-| `CHUNK_SIZE` | `800` | Target chunk size in tokens |
-| `CHUNK_OVERLAP` | `150` | Chunk overlap in tokens |
-| `RETRIEVAL_TOP_K` | `5` | Chunks returned per query |
+| `RETRIEVAL_TOP_K` | `8` | Chunks returned per query |
 | `RETRIEVAL_METHOD` | `mmr` | `similarity` or `mmr` |
+| `RETRIEVAL_MIN_SCORE` | `0.1` | Min score for chunk to enter LLM context (NEW) |
 | `LOG_LEVEL` | `INFO` | Logging verbosity |
 
 ---
@@ -176,43 +237,69 @@ All configuration is managed through the `.env` file. See `.env.example` for the
 
 ### 1. Crawling
 
-The crawler module (`crawler/spider.py`) automatically selects the highest-priority available backend:
+The crawler module (`crawler/`) is now a fully modular pipeline:
 
-1. **Firecrawl** — cloud-based, handles JavaScript-heavy pages.
-2. **Crawl4AI** — async, Playwright-based headless browser.
-3. **Trafilatura** — fast, content-focused extraction.
-4. **BeautifulSoup** — reliable HTML parsing fallback.
+**Backend Router** (`crawler/router.py`) — intelligently selects the cheapest capable backend based on URL signals, instead of blindly trying all backends:
 
-It recursively follows internal documentation links, deduplicates URLs, skips PDFs/images/videos, retries failed pages, and maintains a full crawl log.
+| URL Signal | Primary | Fallback |
+|---|---|---|
+| Static docs (`.readthedocs.io`, `/docs/`) | Trafilatura | BeautifulSoup |
+| GitHub / wiki pages | Trafilatura | BeautifulSoup |
+| JS-heavy / SPA | Crawl4AI | Firecrawl |
+| Unknown | Trafilatura → BeautifulSoup | Crawl4AI |
+
+**Smart Retry Logic** — each error type gets a different action:
+
+| Error Type | Action |
+|---|---|
+| `EMPTY` | Escalate to next backend immediately |
+| `TIMEOUT` | Retry once, then escalate |
+| `RATE_LIMIT` | Sleep exponentially, retry same backend |
+| `AUTH` | Skip entirely — never retry |
+| `NETWORK` | Retry once, then escalate |
+
+**URL Filter** (`crawler/filters.py`) — strips tracking parameters and rejects non-content pages:
+- Strips: `utm_source`, `utm_medium`, `fbclid`, `gclid`, and 15+ tracking params
+- Rejects: `/login`, `/signup`, `/privacy`, `/terms`, `/cookies`, `/share`, `/profile`, etc.
+- Enforces same-domain restriction (configurable to multi-domain)
+
+**Content Validator** (`crawler/validator.py`) — rejects pages before ingestion:
+- Error pages (404/403 returning HTTP 200)
+- CAPTCHA / bot-detection pages
+- Cookie consent walls
+- Login / authentication walls
+- Navigation-only pages (>75% link text)
+
+**Crawl Report** — every crawl writes `knowledge_base/<library>/crawl_report.json` with a structured per-URL event log.
 
 ### 2. Cleaning & Markdown Generation
 
-`preprocessing/cleaner.py` strips navigation bars, sidebars, footers, advertisements, JavaScript, CSS, cookie banners, and duplicate paragraphs. Each cleaned page is then converted to a standardised Markdown document with the following sections:
+`preprocessing/cleaner.py` strips navigation bars, sidebars, footers, advertisements, JavaScript, CSS, cookie banners, and duplicate paragraphs.
 
-`# Overview` · `# Concepts` · `# Architecture` · `# Workflow` · `# API` · `# Parameters` · `# Return Values` · `# Code Example` · `# Output` · `# Notes` · `# Best Practices` · `# Common Mistakes` · `# Performance Notes` · `# Related Topics` · `# References`
+`crawler/extractor.py` — `MarkdownBuilder` generates clean Markdown with only content-driven sections (no more 14 empty placeholder headings), plus YAML frontmatter:
 
-Code blocks, tables, and warnings are always preserved.
+```markdown
+---
+title: "Page Title"
+url: "https://..."
+library: "langchain"
+backend: "trafilatura"
+word_count: 342
+crawled_at: "2026-07-14T06:00:00Z"
+---
+
+## Content
+
+(extracted text)
+
+## References
+
+- Source: [url](url)
+```
 
 ### 3. Metadata
 
-`preprocessing/metadata.py` generates a `metadata.json` beside every Markdown file containing:
-
-```json
-{
-  "id": "uuid",
-  "title": "Page title",
-  "library": "langchain",
-  "topic": "retrieval",
-  "url": "https://...",
-  "category": "guide",
-  "tags": ["rag", "retriever"],
-  "word_count": 342,
-  "reading_time": "2 min",
-  "created": "2024-01-01T00:00:00Z",
-  "updated": "2024-01-01T00:00:00Z",
-  "embedding_status": "pending"
-}
-```
+`preprocessing/metadata.py` generates a `_metadata.json` beside every Markdown file containing: `id`, `title`, `library`, `topic`, `url`, `category`, `tags`, `word_count`, `reading_time`, `backend`, `created`, `updated`, `embedding_status`.
 
 ### 4. Chunking
 
@@ -220,7 +307,7 @@ Code blocks, tables, and warnings are always preserved.
 
 ### 5. Embeddings
 
-`embeddings/embedder.py` uses `BAAI/bge-small-en-v1.5` via SentenceTransformers. Documents are processed in configurable batches with progress logging. Embeddings are automatically persisted to the vector database.
+`embeddings/embedder.py` uses `BAAI/bge-small-en-v1.5` via SentenceTransformers. Documents are processed in configurable batches.
 
 ### 6. Vector Database
 
@@ -229,12 +316,10 @@ Code blocks, tables, and warnings are always preserved.
 ### 7. Retrieval
 
 `retrieval/searcher.py` supports:
-- **Similarity Search** — cosine distance ranking.
-- **MMR (Maximal Marginal Relevance)** — balances relevance and diversity.
+- **Similarity Search** — cosine distance ranking with real scores.
+- **MMR (Maximal Marginal Relevance)** — balances relevance and diversity. Now assigns **real similarity scores** via a parallel lookup (previously hardcoded `1.0` which blocked answer generation).
 - **Metadata Filtering** — filter by library, category, tags, etc.
-- **Top-K** — configurable number of returned chunks.
-
-Every result carries a similarity score, source file path, source URL, and chunk ID.
+- **Configurable Min Score** — `RETRIEVAL_MIN_SCORE=0.1` controls the threshold for including chunks in the LLM context.
 
 ### 8. RAG Pipeline
 
@@ -244,40 +329,45 @@ Every result carries a similarity score, source file path, source URL, and chunk
 [User Query]
     │
     ▼
-[Retrieve Chunks]  ←─ vector store
+[Condense Question]  ←─ chat history
     │
     ▼
-[Build Context]
+[Hybrid Retrieve]    ←─ BM25 + semantic → RRF → cross-encoder rerank
     │
     ▼
-[LLM Generate]  ←─ prompt template
+[Multi-Hop]         ←─ re-retrieves if context is thin
     │
     ▼
-[Extract Citations]
+[Score Filter]      ←─ settings.retrieval_min_score (default 0.1)
+    │
+    ▼
+[LLM Generate]      ←─ prompt template
     │
     ▼
 [Return Answer + Sources]
 ```
-
-If no relevant context is found, the assistant responds:
-> *"I couldn't find this information in the documentation."*
 
 ---
 
 ## Running the Streamlit App
 
 ```bash
-streamlit run ui/app.py
+# Method 1: Activate virtual env first
+..\.venv\Scripts\Activate.ps1
+streamlit run ui\app.py
+
+# Method 2: Direct (no activation needed)
+..\.venv\Scripts\streamlit run ui\app.py
 ```
 
 The interface provides:
 
 - **Chat panel** — conversational QA with the documentation.
-- **Source viewer** — expandable source document cards.
-- **Chunk viewer** — raw retrieved chunks with similarity scores.
-- **Metadata panel** — document metadata for each retrieved chunk.
+- **Source viewer** — expandable source document cards with similarity scores.
+- **Chunk viewer** — raw retrieved chunks with metadata.
 - **Response time** — latency display per query.
 - **Settings sidebar** — switch retrieval method, adjust Top-K, select LLM model.
+- **Ingestion wizard** — crawl new docs directly from the UI.
 
 ---
 
@@ -294,6 +384,37 @@ pytest tests/test_rag_pipeline.py -v
 
 ---
 
+## Changelog
+
+### v2.0.0 — Crawler Redesign (2026-07-14)
+
+#### 🆕 New Modules
+- `crawler/backends/` — each backend isolated in its own module with lazy instantiation
+- `crawler/backends/base.py` — `CrawlResult`, `ErrorType` enum, `_BaseCrawler` abstract class
+- `crawler/router.py` — intelligent backend selection (URL classification + smart per-error retry)
+- `crawler/filters.py` — URL canonicalization (strips UTM/tracking params) + configurable URL filter
+- `crawler/politeness.py` — robots.txt enforcement + per-domain `CrawlLimiter`
+- `crawler/validator.py` — content quality validation (rejects error pages, CAPTCHA, login walls)
+- `crawler/extractor.py` — link extraction from both HTML **and** Markdown (fixes JS-site recursion)
+- `crawler/queue.py` — BFS/DFS/priority queue with retry sub-queue
+- `crawler/report.py` — structured `CrawlEvent` per URL + `crawl_report.json` output
+
+#### 🔧 Bugs Fixed
+- **robots.txt bypass** — was fetched but never enforced; now configurable via `CRAWL_FORCE_ROBOTS`
+- **Blind backend retry** — 4 backends × 3 retries = 12 calls per URL; now signal-based routing
+- **UTM param duplicates** — `?utm_source=email` and `?utm_source=twitter` stored as 2 docs; fixed
+- **Link extraction on JS sites** — broke when Firecrawl/Crawl4AI returned Markdown (no HTML); fixed
+- **14 empty section headings** — generated ~14 useless vector DB chunks per document; removed
+- **No content validation** — error pages and login walls ingested; now rejected before storage
+- **BeautifulSoup duplicate text** — `soup.descendants` visited nodes multiple times; fixed
+- **MMR score hardcoded 1.0** — all MMR results got `score=1.0` causing the score filter to fail; fixed with real parallel similarity lookup
+- **Score threshold too strict** — hardcoded `0.3` rejected valid broad/comparison queries; now `RETRIEVAL_MIN_SCORE=0.1`
+
+#### ⚙️ New Settings
+`CRAWL_DELAY_SECONDS`, `CRAWL_FORCE_ROBOTS`, `CRAWL_ALLOW_PDF`, `CRAWL_ALLOWED_DOMAINS`, `CRAWL_ALLOWED_PREFIXES`, `CRAWL_MIN_CONTENT_CHARS`, `CRAWL_MIN_CONTENT_WORDS`, `CRAWL_BACKEND_TIMEOUT_SECONDS`, `CRAWL_MAX_RETRIES_PER_BACKEND`, `RETRIEVAL_MIN_SCORE`
+
+---
+
 ## Troubleshooting
 
 | Issue | Fix |
@@ -304,9 +425,11 @@ pytest tests/test_rag_pipeline.py -v
 | `LLM API key invalid` | Verify your `.env` values |
 | `No documents found` | Check `knowledge_base/` and re-run ingestion |
 | `Embedding mismatch` | Ensure `EMBEDDING_MODEL` is consistent between ingestion and query |
-| `Crawl returns 0 pages` | Try a different `CRAWLER_TYPE` in `.env` |
+| `Crawl returns 0 pages` | Try a different `CRAWLER_TYPE` in `.env`; check `crawl_report.json` for details |
+| `⚠️ Not available` despite docs existing | Lower `RETRIEVAL_MIN_SCORE` in `.env` (try `0.05`) |
+| `Crawl blocked by robots.txt` | Set `CRAWL_FORCE_ROBOTS=false` in `.env` |
 
-Check `logs/app.log` for detailed error traces.
+Check `logs/app.log` and `knowledge_base/<library>/crawl_report.json` for detailed error traces.
 
 ---
 
@@ -320,3 +443,5 @@ Check `logs/app.log` for detailed error traces.
 - [ ] **Authentication** — optional password-protected Streamlit deployment.
 - [ ] **API endpoint** — FastAPI wrapper for integration with external systems.
 - [ ] **Multi-language support** — multilingual embedding models.
+- [ ] **Async crawling** — use the existing `concurrent_requests` setting for parallel fetching.
+- [ ] **Query decomposition** — detect comparison queries and retrieve from each library independently.

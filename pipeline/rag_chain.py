@@ -235,7 +235,8 @@ class RAGPipeline:
         if settings.multi_hop_enabled:
             docs = self._do_multi_hop(standalone, docs, library_filter or self.library_filter)
             
-        valid_docs = [d for d in docs if getattr(d, 'score', 0) >= 0.3]
+        min_score = settings.retrieval_min_score
+        valid_docs = [d for d in docs if getattr(d, 'score', 0) >= min_score]
         if not docs or not valid_docs:
             yield "⚠️ This information is not available in the ingested documentation."
             return
@@ -354,7 +355,8 @@ class RAGPipeline:
     def _node_generate(self, state: RAGState) -> RAGState:
         """Node 4: Generate a synthesised, grounded, cited answer."""
         docs = state.get("retrieved_docs", [])
-        valid_docs = [d for d in docs if getattr(d, 'score', 0) >= 0.3]
+        min_score = settings.retrieval_min_score
+        valid_docs = [d for d in docs if getattr(d, 'score', 0) >= min_score]
         if not docs or not valid_docs:
             state["answer"] = "⚠️ This information is not available in the ingested documentation."
             return state
